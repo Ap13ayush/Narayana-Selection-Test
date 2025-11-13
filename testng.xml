@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Narayana Selection Test Suite">
+    
+    <test name="API Tests" parallel="false">
+        <classes>
+            <class name="com.narayana.tests.ApiTests">
+                <methods>
+                    <include name="testCreateUser"/>
+                    <include name="testUpdateUser"/>
+                    <include name="testGetUser"/>
+                    <include name="testGetAllUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="UI Tests" parallel="false">
+        <classes>
+            <class name="com.narayana.tests.UiTests">
+                <methods>
+                    <include name="testUserRegistration"/>
+                    <include name="testLoginAndSearch"/>
+                    <include name="testMenuNavigation"/>
+                    <include name="testCompleteCheckoutFlow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+</suite>
